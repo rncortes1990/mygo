@@ -11,7 +11,7 @@ ENV GOPATH=$HOME/app/go
 ENV PATH=$PATH/bin:$GOROOT/bin:$PATH
 
 WORKDIR $HOME/app/go
-copy sessions-component $HOME/app/go
+COPY ./sessions-component $HOME/app/go
 RUN env > ~/.profile &&\
 go version &&\
 go env &&\
